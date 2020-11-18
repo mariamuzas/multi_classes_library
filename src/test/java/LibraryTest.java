@@ -50,7 +50,7 @@ public class LibraryTest {
     public void canRemovedBookFromCollectio(){
         library.addBook(book);
         library.addBook(book1);
-        library.removeBook();
+        library.removeBook(book);
         assertEquals(1, library.countBooksInCollection());
     }
 

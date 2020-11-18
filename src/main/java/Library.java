@@ -4,7 +4,7 @@ import java.util.HashMap;
 public class Library {
     private ArrayList<Book> collection;
     private int capacity;
-    private HashMap<Book, String> fictionCollection;
+    private HashMap<String, Integer> fictionCollection;
 
     public Library(int capacity) {
         this.collection = new ArrayList<>();
@@ -22,11 +22,14 @@ public class Library {
         }
     }
 
-    public Book removeBook() {
-        return this.collection.remove(0);
+    public Book removeBook(Book book) {
+        if (this.collection.contains(book)){
+            this.collection.remove(book);
+        };
+        return book;
     }
 
-    public void addFictionBooks() {
-        fictionCollection.put()
-    }
+//    public void addFictionBooks() {
+//        fictionCollection.put()
+//    }
 }
